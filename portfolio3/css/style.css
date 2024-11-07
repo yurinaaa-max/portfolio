@@ -2,17 +2,13 @@
 
 html {
   font-size: 100%;
-  /* background-color: #f5f5f5; */
   background-color: #fcfcfc;
 }
 body {
   font-size: 1rem;
-  /* color: #24292e; */
   color: #3c3c3c;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  /* font-style: italic; */
+  font-family: "Roboto", Zen Kaku Gothic New;
 }
 a {
   font-size: 1.2rem;
@@ -35,6 +31,7 @@ li {
 .section-title {
   margin-bottom: 100px;
   line-height: 1.5;
+  text-align: center;
 }
 .section-title > .en {
   font-size: 3rem;
@@ -52,11 +49,12 @@ h3 {
   font-size: 2rem;
   margin-bottom: 50px;
   position: relative;
+  text-align: center;
 }
 h3::before{
   content: '';
   display: block;
-  background-color: #d3b635;
+  background-color: #F2D1C9;
   height: 1px;
   position: absolute;
   top: calc(50% - 1px);
@@ -75,9 +73,6 @@ h3 span {
   margin: 0 auto;
   max-width: 1100px;
 }
-p{
-  word-break: auto-phrase;/*変更*/
-}
 
 /*-------------------------------------------
 ヘッダー
@@ -85,18 +80,21 @@ p{
 .header{
   width: 100%;
   height: 80px;
-  /*border-bottom: #c8c8c8 1px solid;*/
-  position: fixed;
   z-index: 100;
-  background-color: #fcfcfc;
-  box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.12);
+  position: fixed;
 }
 .container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 10%;
+  line-height: 80px;
+  background-color: rgba(255, 255, 255, 0);
 }
+
+.header-color{
+  background-color: rgba(255, 255, 255, 0.5);
+}/*←追記*/
 .gnav{
   display: flex;
 }
@@ -104,7 +102,7 @@ p{
   display: flex;
 }
 .gnav-item{
-  margin-left: 25px;
+  margin-left: 40px;
 }
 .gnav-item a{
   position: relative;
@@ -119,143 +117,36 @@ p{
   transition: .3s;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #d3b635;
+  background-color: #F2D1C9;
 }
 .gnav-item a:hover {
-  color: #d3b635;
+  color: #F2D1C9;
   transition: .3s ease;
 }
 .gnav-item a:hover:after {
   width: 100%;
 }
 .contact-btn {
-  margin: 0 20px 0 30px;
+  margin: 0 20px 0 50px;
 }
 .contact-btn a{
-  background-color: #d3b635;
+  background-color: #F2D1C9;
   color: #fcfcfc;
   padding: 10px 30px;
   border-radius: 50px;
-  border: #d3b635 1px solid;
+  border: #F2D1C9 1px solid;
 }
 .contact-btn a:hover{
   background-color: #fcfcfc;
-  color: #d3b635;
-  border: #d3b635 1px solid;
+  color: #F2D1C9;
+  border: #F2D1C9 1px solid;
   transition: .3s ease;
 }
-/*
-#header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  /*border-bottom: #c8c8c8 1px solid
-  position: fixed;
-  z-index: 100;
-  background-color: #fcfcfc;
-  box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.12);
-}
-#header ul {
-  display: flex;
-  padding: 20px 0;
-}
-#header li {
-  margin-left: 40px;
-  padding-bottom: 5px;
-  position: relative;
-}
-#header li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  content: "";
-  transition: .3s;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  background-color: #d3b635;
-}
-#header li a:hover {
-  color: #d3b635;
-  transition: .3s ease;
-}
-#header li a:hover:after {
-  width: 100%;
-}
-#header > div > a{
-  background-color: #d3b635;
-  color: #fcfcfc;
-  padding: 10px 40%;
-  border-radius: 50px;
-}
-#header > div > a:hover{
-  background-color: #fcfcfc;
-  color: #d3b635;
-  border: #d3b635 1px solid;
-}
-*/
 /*-------------------------------------------
-Mainvisual
+mv
 -------------------------------------------*/
-#mainvisual {
-  height: 100vh;
-  margin-bottom: 150px;
-}
-#mainvisual img{
-  vertical-align: bottom;
-  border-radius: 100px;
-  z-index: 2;
-  height: 600px;
-  object-fit: cover;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 150px;
+.mv{
   position: relative;
-  object-position: center bottom;/*追記*/
-}
-#mainvisual .title{
-  z-index: 80;
-  width: 400px;
-  left: 140px;
-  object-fit: contain;
-  position: absolute;
-  top: 300px;
-  color: #d3b635;
-}
-#mainvisual .name{
-  letter-spacing: 0.5rem;
-  z-index: 80;
-  position: absolute;
-  top: 850px;
-  font-size: 0.8rem;
-  color: #d3b635;
-}
-#mainvisual .name::before {
-  content: '';
-  display: inline-block;
-  background-color: #d3b635;
-  height: 1px;
-  width: 100px;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  margin-left: -10px;
-}
-#design-cording{
-  position: fixed;
-  font-weight: 700;
-  font-size: 9rem;
-  z-index: -100;
-  top: 0%;
-  color: #fcfcfc;
-  width: 100%;
-  writing-mode: vertical-rl;
-}
-#design-cording > span{
-  color: #fcfcfc;
 }
 
 /*-------------------------------------------
@@ -265,7 +156,8 @@ arrow
 .scroll1 {
   position: absolute;
   left: 50%;
-  bottom: 10%;
+  transform: translateX(-50%);
+ bottom:15%;
 }
 /* 線のアニメーション部分 */
 .scroll1::before {
@@ -352,16 +244,50 @@ works-index.html
 /*-------------------------------------------
 contact
 -------------------------------------------*/
-#contact {
-  background-color: #d3b635;
-  padding: 100px;
+#contact .section-title {
+  text-align: center;
 }
-#contact .text {
-  margin: 0 auto;
-  color: #fcfcfc;
+/* .scroll {
+  margin: auto;
+  width: 100%;
+  line-height: 1.5em;
+  text-align : center;
+  color: #000000;
+  overflow: hidden;
+}
+.scroll span{
+  font-weight: bold;
+  display: inline-block;
+  font-size: 250px;
+  white-space: nowrap;
+  line-height: 1em;
+  animation: scrollAnime 50s linear infinite;
+  font-family:serif;
+  color:rgba(0,0,0,.0);
+  -webkit-text-stroke: 1px #24292e;
+  z-index: 1;
+}
+@keyframes scrollAnime{
+    0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+.philosophy-container{
+  margin-left: 65%;
+} */
+/*-------------------------------------------
+contact
+-------------------------------------------*/
+#contact {
+  background-image: url(../img/pc-footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+#contact {
+  padding: 100px 10%;
 }
 #contact .section-title::after {
-  background-color: #fcfcfc;
+
 }
 form {
   max-width: 800px;
@@ -374,27 +300,18 @@ form {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+  box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.1);
 }
 textarea {
   height: 10rem;
 }
 
-/* ボタン */
-/* <!-- 書いてみたコード --> */
-/* button {
-  padding: 0;
-  border: none;
-  outline: none;
-  font: inherit;
-  color: inherit;
-  background: none
-} */
 #contact .button {
   text-align: center;
   margin-top: 10px;
 }
 #contact .button #submit {
-  background-color: #f26768;
+  background-color: #F2D1C9;
   color: #fcfcfc;
   width: 200px;
   padding: 10px;
@@ -405,28 +322,37 @@ textarea {
 }
 #contact .button #submit:hover {
   background: #fcfcfc;
-  color: #f26768;
+  color: #F2D1C9;
+  border: 1px #F2D1C9 solid;
 }
+
 
 /*-------------------------------------------
 footer
 -------------------------------------------*/
 #footer {
-background-color: #d3b635;
 color: #fcfcfc;
-text-align: center;
 padding: 10px;
+background-color: #F2D1C9;
+text-align: center;
+justify-content: space-between;
 }
 /*-------------------------------------------
-about link
+top link
 -------------------------------------------*/
-#about-btn{
+#top-btn{
   position: fixed;
-  width: 8%;
+  width: 80px;
   bottom: 4%;
   right: 4%;
-  animation: poyopoyo 2s ease-out infinite;
+  /*
   display: none;
+  transition: 0.5s ease;
+  */
+}
+#top-btn:hover {
+  animation: poyopoyo 2s ease-out infinite;
+  opacity: 0.5;
 }
 
 @keyframes poyopoyo {
@@ -437,23 +363,13 @@ about link
     transform: scale(0.95);
   }
 }
-#about-btn p {
-  text-align: center;
-  font-size: 0.8rem;
-}
-#about-btn img {
-  border-radius: 100%;
-}
 
 /*-------------------------------------------
 works ページ
 -------------------------------------------*/
-/* .works .item{
-  margin-bottom: 150px;
-} */
 .works .mockup img {
   width: 100%;
-  height: calc(100vh - 100px);
+  margin-top: 80px;
   object-fit: cover;
   margin-bottom: 50px;
 }
@@ -469,7 +385,7 @@ works ページ
   max-width: 880px;
 }
 .works dt{
-  color: #d3b635;
+  color: #F2D1C9;
   width: 20%;
   font-size: 1rem;
   border-bottom: #c8c8c8 1px solid;
@@ -482,7 +398,7 @@ works ページ
 .works dd{
   width: 80%;
   border-bottom: #c8c8c8 1px solid;
-  padding: 40px;
+  padding: 40px;  
   word-break: auto-phrase;/*追記*/
 }
 .works dd:first-of-type{
@@ -492,17 +408,14 @@ works ページ
 .works .item {
   margin-bottom: 150px;
 }
-.works .design-text {
-  display: flex;
-  justify-content: space-between;
+.works .next {
   margin-bottom: 150px;
+  background-color: #F2D1C9;
+  padding: 50px;
+  border-radius: 10px;
 }
-.works .design-text p {
-  margin-right: 50px;
-}
-.works .design-text img {
-  width: 400px;
-
+.works .next img{
+  border-radius: 10px;
 }
 /* ボタン */
 .home-link {
@@ -512,16 +425,16 @@ works ページ
   margin:0 auto 150px auto;
 }
 .home-link .button {
-  color: #f26768;
+  color: #F2D1C9;
   line-height: 50px;
   background-color: #fcfcfc;
   display: block;
-  border: #f26768 1px solid;
+  border: #F2D1C9 1px solid;
   transition: all 0.8s;
 }
 .home-link .button:hover {
   color: #fcfcfc;
-  background-color: #f26768;
+  background-color: #F2D1C9;
   line-height: 50px;
   transition: all 0.5s;
   border-radius: 50px;
@@ -596,33 +509,77 @@ works-color
 /*-------------------------------------------
 ABOUTページ
 -------------------------------------------*/
-.about-mv {
+/* .about-mv {
   height: calc(100vh - 80px);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  position: relative;
-  margin-bottom: 150px;
 }
 #about {
-  /* width: 1000px; */
   background-color: rgba(255, 255, 255, 0);
   opacity: 80%;
   position: absolute;
   top: 20%;
   left: 0;
   width: 400px;
-  writing-mode: vertical-rl;
-  height: 500px;
-  text-align: left;
+
 }
 
 #about p{
   line-height: 2;
-  /* white-space: nowrap; */
-  /* word-break: keep-all; */
+  word-break: break-all;
+} */
+
+
+
+
+
+/*--------------------------------
+ 下層：aboutページ
+---------------------------------*/
+.about-mv-container{
+  top: 80px;
+  position: relative;
+  background-color: #fafaf7;
+  z-index: 1;
 }
+.about-mv-container > h2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%,50%);
+  margin: 0;
+  padding: 0;
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+}
+
+/*下からフェードイン*/
+/* .fade-in-bottom {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+} */
+/*--------------------------------
+ about-profile
+---------------------------------*/
+
+.about {
+  background-color: #ffff;
+  color: #000000;
+  padding-bottom: 150px;
+  z-index: 100;
+}
+.about-profile {
+  width: 615px;
+  text-align: justify;
+  margin: 0 auto;
+}
+.about-profile h3 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 /*-------------------------------------------
 SKILL 共通
 -------------------------------------------*/
@@ -646,10 +603,10 @@ SKILL 共通
 }
 #skill .flex .text p {
   line-height: 2;
-  padding: 0 8%;
-  text-align: left;
+  /* width: 400px; */
 }
 #skill .graph {
+  padding: 20px;
   width: 50%;
   display: flex;
   flex-wrap: wrap;
@@ -686,49 +643,44 @@ SKILL　デザイン
 /*-------------------------------------------
 SKILL　個別グラフ
 -------------------------------------------*/
-#skill #html{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 70%, #ebebeb 70% 100%);
+#skill #html-css{
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 70%, #ebebeb 70% 100%);
 }
-#skill #css{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 60%, #ebebeb 60% 100%);
-}
-#skill #js{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 40%, #ebebeb 40% 100%);
+#skill #js-jquery{
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 40%, #ebebeb 40% 100%);
 }
 #skill #php{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 10%, #ebebeb 10% 100%);
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 10%, #ebebeb 10% 100%);
 }
 #skill #wp{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 50%, #ebebeb 50% 100%);
-}
-#skill #jquery{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 60%, #ebebeb 60% 100%);
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 50%, #ebebeb 50% 100%);
 }
 #skill #photoshop{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 70%, #ebebeb 70% 100%);
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 70%, #ebebeb 70% 100%);
 }
 #skill #figma{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 60%, #ebebeb 60% 100%);
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 60%, #ebebeb 60% 100%);
 }
 #skill #canva{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 20%, #ebebeb 20% 100%);
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 20%, #ebebeb 20% 100%);
 }
 #skill #illustrator{
-	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#d3b635 0% 10%, #ebebeb 10% 100%);
+	background-image: radial-gradient(#fcfcfc 30%, transparent 31%), conic-gradient(#F2D1C9 0% 40%, #ebebeb 10% 100%);
 }
 /*--------------------------------
 　biography
 ---------------------------------*/
 #biography{
-  margin-bottom: 150px;
-  padding: 150px 0;
+  margin: 150px auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
   background-color: #f6f6f6;
 }
 .timeline time {
   width: 20%;
   font-size: 14px;
   padding-left: 20px;
-  color: #d3b635;
+  color: #F2D1C9;
 }
 .list-text {
   width: 100%;
@@ -746,6 +698,7 @@ SKILL　個別グラフ
   line-height: 1;
   margin-left: 0px;
   margin-bottom: 15px;
+  text-align-last: left;
 }
 .list-text h3::before{
 display: none;
@@ -789,7 +742,7 @@ display: none;
 	left: -1.8px;;
 	width:12px;
 	height: 12px;
-	background:#d3b635;
+	background:#F2D1C9;
 	border-radius: 50%;
 }
 /*--------------------------------
@@ -801,16 +754,18 @@ display: none;
 #like .flex {
   display: flex;justify-content: space-around;
   flex-wrap: wrap;
+  text-align: center;
 }
 #like .flex > div {
   width: 30%;
   margin-bottom: 50px;
 }
 #like .flex img {
-  border-radius: 100px;
+  border-radius: 100%;
 }
 #like .flex p {
   margin-top: 10px;
+  text-align: center;
 }
 
 
@@ -821,21 +776,14 @@ SP
   .wrapper {
     padding: 0 4%;
   }
-/*   
-  .pc-only {
-    display: none;
-  }
-
-  .sp-only {
-    display: block;
-  } */
   #works #works-img  ,#works #achievements{
     display: block;
+    text-align: center;
+    
   }
   #works li{
     width: 100%;
   }
-
   /* works */
   .works dt{
     width: 20%;
@@ -894,33 +842,36 @@ SP
   #skill #design {
     flex-direction: row-reverse;
   }
-    /*-------------------------------------------
+  /*-------------------------------------------
   LIKE
   -------------------------------------------*/
   #like {
     margin-bottom: 100px;
   }
-  #like .flex {
-    display: block;
-  }
-  #like .flex > div {
-    width: 100%;
-    margin-bottom: 100px;
-  }
-}
 /*追記*/
 .drawer-toggle {
   display: none;
 }
+  /* スクロール */
+  .scroll1 {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+  }
 
+}
 @media screen and (max-width: 767px) {
+  .site-title {
+    padding: 20px 0;
+  }
   .header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fcfcfc;
     z-index: 100;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
   }
   .header.is-active  {
     width: 100%;
@@ -932,8 +883,11 @@ SP
   .header.is-active .container {
     padding: 0;
   }
+  .gnav-item{
+    margin-left: 0px;
+  }
   .gnav{
-    transform: translateX(-150%);
+    transform: translateX(-300%);
     transition: all 0.6s ease 0s;
   }
   .gnav.is-active{
@@ -974,7 +928,7 @@ SP
   .drawer-toggle.is-active .drawer-toggle-icon1 {
     transform: rotate(-45deg);
     top: 8px;
-    background-color: #fff;
+    background-color: #3c3c3c;
   }
   .drawer-toggle.is-active .drawer-toggle-icon2 {
     display: none;
@@ -982,7 +936,7 @@ SP
   .drawer-toggle.is-active .drawer-toggle-icon3 {
     transform: rotate(45deg);
     top: 8px;
-    background-color: #fff;
+    background-color: #3c3c3c;
   }
   .drawer-toggle.is-active::after {
     display: none;
@@ -1014,4 +968,21 @@ SP
     margin: 0;
     margin-top: 30px;
   }
+  /* like */
+  #like .flex img  {
+    width: 80%;
+  }
+  #like .flex > div {
+    margin-bottom: 100px;
+  }
+
 }
+
+/*-------------------------------------------
+mv
+-------------------------------------------*/
+.mv{
+  position: relative;
+}
+
+

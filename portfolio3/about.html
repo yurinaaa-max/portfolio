@@ -6,41 +6,58 @@
     <title>Riho Ueno Portfolio</title>
     <meta name="description" content="「デザインで人と人との繋がりを。」WEBデザイナー上野莉穂のポートフォリオサイトです。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="">
+    <link rel="icon" href="img/icon.ico">
     <!-- css -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <header id="header" class="wrapper pc-only">
-      <h1 class="site-title"><a href="index.html"><img src="https://picsum.photos/300/200" alt="Profile"></a></h1>
-      <nav>
-        <ul>
-          <li><a href="index.html#works">WORKS</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="about.html#skill">SKILL</a></li>
-        </ul>
-      </nav>
-      <div><a href="#contact">CONTACT</a></div>
-    </header>
+    <header class="header">
+      <div class="container">
+        <h1 class="site-title"><a href="index.html"><img src="img/log.png" alt="Profile"></a></h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="about.html">ABOUT</a></li>
+            <li class="gnav-item"><a href="about.html#skill">SKILL</a></li>
+          </ul>
+          <div class="contact-btn"><a href="#contact">CONTACT</a></div>
+        </nav>
+      </div>
+    </header>    
+    <div class="drawer-toggle">
+      <div class="drawer-toggle-icons">
+          <div class="drawer-toggle-icon1"></div>
+          <div class="drawer-toggle-icon2 "></div>
+          <div class="drawer-toggle-icon3 "></div>
+      </div>
+    </div>
+    <main>
     <!-- /header -->
     <!-- mv -->
     <div class="about-mv"></div>
     <!-- /mv -->  
 
     <!-- about -->
-    <section id="about">
+    <!-- <section id="about">
       <p>
         ポートフォリオサイトをご覧いただきありがとうございます。北海道在住の上野莉穂と申します。<br>
-        <!-- 私は動物看護師や、飲食店スタッフとして働いてきましたが、幼少期から好きだったクリエイティブの世界で貢献したく、２０２４年度５月にWebデザイナーになることを決意し、オンラインスクールに入学。<br>  -->
         私は、接客業で培ったコミュニケーションでお客様のニーズを汲み取り、デザインを通して人と人との繋がりを作るお手伝いがしたいと考えています。
       </p>
-    </section>
-    <!-- /about --> 
+    </section> -->
+    <!-- メインビジュアル -->
+    <picture>
+      <source id="mainvisual" srcset="img/about-mv.png" media="(min-width: 1100px)"  /> 
+      <source srcset="img/about-mv.png" media="(max-width: 1099px)"  /> 
+      <img src="img/pc-mv.png" alt="画像" />
+    </picture>
     <!-- skill -->
     <section class="wrapper" id="skill">
       <h2 class="section-title">
@@ -60,28 +77,20 @@
         </div>
         <div class="graph">
           <div class="item">
-            <div id="html" class="pie">70%</div>
-            <p>HTML</p>
-          </div>
-          <div class="item">
-            <div id="css" class="pie">60%</div>
-            <p>CSS</p>
-          </div>
-          <div class="item">
-            <div id="js" class="pie">40%</div>
-            <p>javascript</p>
-          </div>
-          <div class="item">
-            <div id="php" class="pie">10%</div>
-            <p>PHP</p>
+            <div id="html-css" class="pie">70%</div>
+            <p>HTML/CSS</p>
           </div>
           <div class="item">
             <div id="wp" class="pie">50%</div>
             <p>WordPress</p>
           </div>
           <div class="item">
-            <div id="jquery" class="pie">60%</div>
-            <p>jQuery</p>
+            <div id="js-jquery" class="pie">40%</div>
+            <p>javascript/jQuery</p>
+          </div>
+          <div class="item">
+            <div id="php" class="pie">10%</div>
+            <p>PHP</p>
           </div>
         </div>
       </div>
@@ -104,12 +113,12 @@
             <p>figma</p>
           </div>
           <div class="item">
-            <div id="canva" class="pie">20%</div>
-            <p>Canva</p>
+            <div id="illustrator" class="pie">40%</div>
+            <p>Illustrator</p>
           </div>
           <div class="item">
-            <div id="illustrator" class="pie">10%</div>
-            <p>Illustrator</p>
+            <div id="canva" class="pie">20%</div>
+            <p>Canva</p>
           </div>
         </div>
       </div>
@@ -242,10 +251,39 @@
     </section>
 
 
+      <!-- contact -->
+      <section class="wrapper" id="contact">
+        <h2 class="section-title">
+          <span class="en">CONTACT</span>
+          <span class="ja">お問い合わせ</span>
+        </h2>
+        <form action="#" method="post" onsubmit="return false;">
+          <input type="text" name="honeypot" style="display:none">
+          <input type="hidden" name="accessKey" value="6e18bcab-199c-4bc2-af03-b0742b03b764">
+          <input type="hidden" name="subject" value="ポートフォリオサイトからお問い合わせがありました。" />
+          <input type="hidden" name="replyTo" value="@uenrih.o@gmail.com">
+          <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+          <input class="contact" type="text" id="name" name="your-name" placeholder="お名前">
+          <input class="contact" type="email" id="email" name="your-email" placeholder="メールアドレス">
+          <textarea class="contact" id="message" name="your-message" placeholder="メッセージ"></textarea>
+          <div class="button"><input id="submit" type="button" onClick="submit();" value="送信"></div>
+        </form>
+      </section>
+    </main>
+
     <!-- フッター -->
-    <footer id="footer">
-      <p>&copy;Ueno Riho design</p>
+    <footer class="wrapper" id="footer">
+      <p>&copy;Riho Ueno design</p>
     </footer>
+    <!-- top -->
+    <a href="#">
+     <div id="top-btn">
+        <img src="img/top.png" alt="">  
+     </div>
+    </a>
+    <!-- js -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
 
   </div>
     <!-- jquery -->

@@ -33,7 +33,7 @@ $(function () {
   // 送信ボタンクリック時の処理
   $('#submit').on('click', function (event) {
   // formタグによる送信を拒否
-  event.preventDefault();
+
 
   // 入力チェックをした結果をresultに格納
   let result = inputCheck();
@@ -44,7 +44,6 @@ $(function () {
   // エラーが無かったらフォームを送信する
   if (error == false) {
     alert('お問い合わせを送信しました。')
-    // フォーム送信は実際には行わず、送信成功メッセージのみ表示する
   } else {
     // エラーメッセージを表示する
       alert(message);
@@ -110,27 +109,21 @@ $(function () {
   return result;
   }
 
-
-
-
-
-
-
-
-
-  // ABOUTリンクボタン
+  // topリンクボタン
   $(window).scroll(function(){
-    if($(this).scrollTop()> 2000){
-      $('#about-btn').fadeIn();
+    if($(this).scrollTop()> 200){
+      $('#top-btn').fadeIn(1000);
     } else {
-      $('#about-btn').fadeOut();
+      $('#top-btn').fadeOut(1000);
     }
   });
-
-  // 経歴テキストフェードイン
-  $('.list-text').on("inview", function (event, isInView) {
-    if (isInView) {
-      $(this).stop().addClass("is-show");
+  //ヘッダースクロール色変え
+  $(window).on("scroll", function () {
+    const sliderHeight = $(".mv").height();
+    if (sliderHeight - 30 < $(this).scrollTop()) {
+      $(".header").addClass("header-color");
+    } else {
+      $(".header").removeClass("header-color");
     }
   });
 
